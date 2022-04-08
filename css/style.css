@@ -1,0 +1,116 @@
+*{
+	box-sizing: border-box;
+
+}
+body{
+	background-color: gray;
+	margin:0px;
+	padding:0px;
+
+}
+#statistik ul{
+	color: #fff;
+}
+
+canvas{
+	margin:0px;
+	padding: 0px;
+	user-select: none;
+	z-index: 120;
+}
+.menu{
+	width: 300px;
+	height: 100%;
+	position:fixed;
+	background-color: rgba(100,100,100,.8);
+	right: -300px;
+	padding-top: 20px;
+	  animation-duration: 1s;
+	   overflow: overlay;
+	   padding-right: 20px;
+	   text-align: center;
+}	
+/*.menu div img{
+transform: rotateZ(180deg);
+
+}*/
+.button_div{
+	padding-left: 5px;
+	margin-top: 8px;
+}
+.butt{
+	width: 32%;
+	height: 30px;
+	background: #A6A6A6;
+	border: 0px;
+	border-radius: 5px;
+	transition: .04s linear;
+}
+
+#test{
+	padding:5px;
+	color:#000;
+	text-align: center;
+}
+.on{
+animation-name: on;
+
+right: 0px;
+}
+.off{
+	animation-name: off;
+
+  right: -300px;
+}
+
+.offimg{
+	 animation-duration: 1s;
+	animation-name: off_img;
+	transform: rotateZ(0deg);
+}
+.onimg{
+	animation-duration: 1s;
+	animation-name: on_img;
+	transform: rotateZ(180deg);
+}
+
+@keyframes off_img{
+0%{transform: rotateZ(180deg);}
+100%{transform: rotateZ(0deg);}
+}
+@keyframes on_img{
+0%{transform: rotateZ(0deg);}
+100%{transform: rotateZ(180deg);}
+}
+.button{
+	width: 30px;
+	height: 60px;
+	background-color: rgba(.3,.3,.3,.3);
+	position: fixed;
+	right: 0px;
+	top :40px;
+	border-radius: 15px 0px 0px 15px;
+	display: flex;
+	align-items: center;
+	transition: .1s linear;
+	 z-index: 100;
+}
+#button img{
+width: 25px;
+height: 30px;
+margin-left: 5px;
+}
+.button:hover{
+	background-color: rgba(.4,.4,.4,.6);
+}
+.button:active{
+	background-color: rgba(.4,.4,.4,.2);
+}
+@keyframes on{
+	0%{right: -300px;}
+	100%{right: 0px;}
+}
+@keyframes off{
+	0%{right: 0px;}
+	100%{right: -300px;}
+}
